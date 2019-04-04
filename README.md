@@ -4,6 +4,8 @@ You can choose between clothes for Men and Women. They have 2 categories (Jacket
 At the right of your screen is the Cart. From Login you can enter in your administrator account.
 If have admin rights you can create/delete/edit items , and see/delete all purchases.
 
+
+
 Index page:
 ![Index](https://github.com/BackNot/WebShopMVC/blob/master/PicturesOfProject/Index.png)
 
@@ -35,6 +37,7 @@ Admin options:
 
 
 Create option:
+
 ![Create](https://github.com/BackNot/WebShopMVC/blob/master/PicturesOfProject/CreateItem.png)
 
 
@@ -42,6 +45,7 @@ Edit option:
 ![Edit](https://github.com/BackNot/WebShopMVC/blob/master/PicturesOfProject/Edit.png)
 
 Delete option:
+
 ![Delete](https://github.com/BackNot/WebShopMVC/blob/master/PicturesOfProject/Delete.png)
 
 See all purchases:
