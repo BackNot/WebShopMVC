@@ -1,0 +1,153 @@
+﻿@model IEnumerable<WebShop.Models.Purchase>
+
+@using WebShop.Models;
+@using WebShop.Context;
+
+@{
+    ViewBag.Title = "Index";
+    WebShopDb context = new WebShopDb();
+}
+
+<h2>Purchases</h2>
+
+
+<div class="table-responsive">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PurchaseID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Information)
+            </th>
+            
+
+
+            <th>
+                Items:
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+        </th>
+            <th>
+                Mark as:
+            </th>
+    </tr>
+        @if (Model != null) { 
+    foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PurchaseID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Information)
+            </td>
+            <td>
+                @{
+try { 
+       
+       
+                    
+                    
+                        foreach (var boughtItem in item.PurchasedItems)
+                        {
+                           
+                         @boughtItem.Item <text>(Size:@boughtItem.Sizes)</text><br />
+                        }
+                        
+                   
+	            
+                    }
+                    catch(Exception)
+                   {
+                        // do nothing
+                     }
+                }
+                
+               
+               </td>
+            <td>
+                @{
+                    decimal total = 0;
+        foreach (var itemPrice in item.PurchasedItems)
+        {
+            var itemInDb = context.Items.Find(int.Parse(itemPrice.Item)); // find the item in Db through id
+           try
+           { 
+            total += itemInDb.Price;
+            }
+            catch(System.NullReferenceException)
+           { // if item doesn't exist anymore 
+                <text><span class="text-small text-danger">Not available: </span></text>
+           }
+        }
+       @total <text>BGN</text>
+        
+                }
+            </td>
+            <td>
+                @if(item.Status==PurchaseStatus.Pending)
+                { 
+                <div class="bg-warning text-dark lead">
+                    @Html.DisplayFor(modelItem => item.Status)
+                </div>
+                }
+                @if (item.Status == PurchaseStatus.Sent)
+                {
+                    <div class="bg-success text-white lead">
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </div>
+                }
+                @if (item.Status == PurchaseStatus.Deleted)
+                {
+                    <div class="bg-danger text-white lead">
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </div>
+                }
+            </td>
+           
+            <td>
+                @Html.ActionLink("Sent", "Sent", new { id = item.PurchaseID }) <br />
+                @Html.ActionLink("Pending", "Pending", new { id = item.PurchaseID }) <br />
+                @Html.ActionLink("Delete", "Delete", new { id = item.PurchaseID })
+            </td>
+        </tr>
+    }
+        }
+</table>
+</div>
+@Html.ActionLink("Delete all marked purchases", "DeleteAll")

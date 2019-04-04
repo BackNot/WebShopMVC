@@ -1,0 +1,358 @@
+﻿@using WebShop.Models;
+@using WebShop.Context;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/PagedListStyle.css" rel="stylesheet" type="text/css" />
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+
+    <style>
+        .row {
+        }
+        .button-men {
+          
+        }
+        .container-header {
+            background-size: cover;
+        }
+        .nav-background {   
+            background-color: #8e8dfa
+        }
+        .nav-background2 {
+            background-image: url("/Images/nav-background2.png");
+            background-size: cover;
+        }
+        .border-button {
+            border-style: solid;
+            border-width: 1px;
+        }
+
+      
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container-fluid {
+            min-height: 100%;
+            width: 100%;
+            background-color: #99ccff;
+        }
+
+        .cart-container {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid d-flex flex-column">
+        @{
+            WebShopDb context = new WebShopDb();
+            
+            HttpCookie cookie = Request.Cookies.Get("ShoppingCartId");
+            
+            Cart cartObj;
+            if(cookie==null)
+            {
+
+                cartObj = new Cart();
+            }
+            else
+            {
+                
+              cartObj = (from obj in context.Carts
+                           where obj.ShoppingCartId == cookie.Value
+                           select obj).FirstOrDefault(); // get the cart 
+            }
+             
+            }
+            
+      
+        <div class="row header">
+            <div class="col-12 text-center">
+                <img src="~/Images/webshop.png" class="container-header" />
+
+            </div>
+        </div>
+        <div class="row nav-background">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-light ">
+                    <!--bg-light class-->
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="~/Home/Index"><img src="~/Images/button_home.png" /> </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="~/Images/button_men.png" />
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="~/Men/Shirts">Shirts</a>
+                                    <a class="dropdown-item" href="~/Men/Jackets">Jackets</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="~/Images/button_women.png" />
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                                    <a class="dropdown-item" href="~/Women/Dresses">Dresses</a>
+                                    <a class="dropdown-item" href="~/Women/Jeans">Jeans</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="~/Home/FAQ"><img src="~/Images/button_faq.png" />
+</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="~/Home/AboutUs"><img src="~/Images/button_about-us.png" /></a>
+                                
+                            </li>
+
+                        </ul>
+                        
+                        @if (User.Identity.IsAuthenticated) // TODO
+                        {
+                            <button class="admin-panel-button btn btn-warning ml-md-3">Admin panel</button>
+
+                            using (Html.BeginForm("Logoff", "Home", FormMethod.Post, new { id = "submitForm" }))
+                            {
+                                @Html.Partial("MemberSection");
+                            }
+                        }
+                        else
+                        {
+                            @Html.Partial("NormalSection");
+                        }
+                    </div>
+
+
+                </nav>
+            </div>
+        </div>
+
+        <div class="row flex-grow-1">
+
+         
+            <!-- if user is in the admin panel give more space to the body so you can render the tables right
+                 (the admin don't need cart anyway)-->
+            @{
+                var currentController = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+                if ((currentController == "Admin") || (currentController == "AdminPurchases"))
+                {
+                    <div class="col-10 ">
+                        @RenderBody()
+                    </div>
+                }
+                else
+                {
+                    <div class="col-8 ">
+                        @RenderBody()
+                    </div>
+                }
+            }
+            <div class="col-4">
+                @{
+                    var controllerName = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+                    if ((controllerName != "Admin") && (controllerName != "AdminPurchases")) // If user is in admin panel dont show him cart
+                    {
+                        <div class="cart-container d-flex flex-column align-items-center">
+                            <div class="row  ">
+                                <div class="col-12">
+                                    <span class="display-4 text-small d-none d-md-block text-center"> Cart </span>
+                                    <span class="cart-value d-none d-md-block  text-center">
+                                        @{
+                        decimal total = 0;
+                        if (cartObj.BoughtItems != null) { 
+                       foreach (var item in cartObj.BoughtItems)
+                        {
+                            var itemInDb = context.Items.Find(int.Parse(item.Item));
+                            total += itemInDb.Price;
+                       }
+                        }
+                                        } @total BGN
+                                    </span>
+                                    <hr class="d-none d-md-block" />
+                                </div>
+                                <!-- ITEMS ARE HERE -->
+                                <div class=" container d-flex flex-column align-items-center">
+                                    <div class="d-none d-sm-block  ">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">ID</th>
+                                                    <th scope="col">Name</th>
+                                                    <th scope="col">Description</th>
+                                                    <th scope="col">Size</th>
+                                                    <th scope="col">Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                                @{
+                                                    if((cookie!=null)&&(cartObj.BoughtItems!=null)) // if cart does not exist no need to render next section
+                                                    { 
+                        foreach (var item in cartObj.BoughtItems)
+                        {
+                            var itemInDb = context.Items.Find(int.Parse(item.Item));
+                            
+                      // CART
+                           
+                                <tr>
+                                    <th scope="row">@item.Item</th>
+                                    <td>@itemInDb.Name</td>
+                                    <td>@itemInDb.Description</td>
+                                    <td>@item.Sizes</td>
+                                    <td>@itemInDb.Price</td>
+                                </tr>
+                            }
+                            }
+                        }
+                                               
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+
+                                    <div class="row ">
+
+                                        <!-- if screen is smaller make another buttons-->
+                                        <div class="col-12 text-center d-none d-sm-block">
+                                            @using (Html.BeginForm("Clear", "Cart"))
+                                            {
+                                                <input type="submit" class="btn btn-sm btn-outline-danger" value="Clear cart"/>
+                                            }
+                                            <!-- TODO: Make dialog ' are you sure yes or no' -->
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="row ">
+
+                                        <!-- if screen is smaller make another buttons-->
+                                        <div class="col-12 text-center d-none d-sm-block mt-2">
+                                            @using (Html.BeginForm("Buy", "Cart", FormMethod.Get))
+                                            {
+                                                <input type="submit" class="btn btn-sm btn-outline-success" value="Buy items"/>
+                                            }
+                                            <!-- TODO: Make dialog ' are you sure yes or no' -->
+
+                                        </div>
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+        <!-- SMALL SCREEN -->
+        <div class=" row d-sm-none ">
+            <div class="col-12">
+                @{
+                    var controllerNameSM = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+                    if ((controllerNameSM != "Admin") && (controllerNameSM != "AdminPurchases")) // If user is in admin panel dont show him cart
+                    {
+                        <span class="display-4 text-small text-center"> Cart </span>
+
+                if((cookie!=null)&&(cartObj.BoughtItems!=null)) // if cart does not exist no need to render next section
+                                                    { 
+                  foreach (var item in cartObj.BoughtItems)
+                        {
+                            var itemInDb = context.Items.Find(int.Parse(item.Item));
+                            
+                      // CART
+                           
+                             
+                            <hr />
+                            <div class="row">
+                                ID: @item.Item
+                            </div>
+                            
+                            <div class="row">
+                                Price: @itemInDb.Price
+                            </div>
+                            <div class="row">
+                               Size: @item.Sizes
+                            </div>
+                            <div class="row">
+                                Info: @itemInDb.Description
+                            </div>
+                        }
+                        }
+                        }
+                        <br /><hr />
+                        <span>TOTAL: </span>
+                        <span class="cart-value text-center">
+                            @{
+                            decimal totalSM = 0;
+                            if (cartObj.BoughtItems != null) {
+                            foreach (var item in cartObj.BoughtItems)
+                            {
+                            var itemInDb = context.Items.Find(int.Parse(item.Item));
+                            totalSM += itemInDb.Price;
+                            }
+                            }
+                            } @totalSM BGN
+                        </span>
+                        <br /><hr />
+                        <div class="col-12 text-center">
+                            @using (Html.BeginForm("Clear", "Cart"))
+                            {
+                                <input type="submit" class="btn btn-sm btn-outline-danger" value="Clear"/>
+                            }
+
+                        </div>
+                        <br />
+                        <div class="col-12 text-center">
+                            @using (Html.BeginForm("Buy", "Cart"))
+                            {
+                                <input type="submit" class="btn btn-sm btn-outline-success" value="Buy" />
+                            }
+                        </div>
+
+                    }
+                
+            </div>
+            <!-- END SMALL SCREEN-->
+          
+
+
+        </div>
+        <div class="row ">
+            <div class="col-12">
+                <h5 class="text-muted text-center"> Web Shop 2018 ©</h5>
+            </div>
+        </div>
+        
+        </div>
+        <script src="~/Scripts/jquery-3.0.0.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <script src="~/Scripts/custom/mainscript.js"></script>
+
+</body>
+</html>

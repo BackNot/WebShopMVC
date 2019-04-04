@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6719408D-C00B-4DE2-8704-CB6CB34E282F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebShop</RootNamespace>
+    <AssemblyName>WebShop</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Content\PagedListStyle.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\custom\mainscript.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <None Include="Scripts\jquery-3.0.0.intellisense.js" />
+    <Content Include="Scripts\index.d.ts" />
+    <Content Include="Scripts\jquery-3.0.0.js" />
+    <Content Include="Scripts\jquery-3.0.0.min.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.0.0.min.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\README.md">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Context\CustInit.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\AdminPurchasesController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Context\WebShopDb.cs" />
+    <Compile Include="Controllers\MenController.cs" />
+    <Compile Include="Controllers\WomenController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807262042123_InitialCreate.cs" />
+    <Compile Include="Migrations\201807262042123_InitialCreate.Designer.cs">
+      <DependentUpon>201807262042123_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807291857250_AddItemSize.cs" />
+    <Compile Include="Migrations\201807291857250_AddItemSize.Designer.cs">
+      <DependentUpon>201807291857250_AddItemSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808041936538_ItemArray.cs" />
+    <Compile Include="Migrations\201808041936538_ItemArray.Designer.cs">
+      <DependentUpon>201808041936538_ItemArray.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808041948120_removeItemArray.cs" />
+    <Compile Include="Migrations\201808041948120_removeItemArray.Designer.cs">
+      <DependentUpon>201808041948120_removeItemArray.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808051750529_AddDataAnnotations.cs" />
+    <Compile Include="Migrations\201808051750529_AddDataAnnotations.Designer.cs">
+      <DependentUpon>201808051750529_AddDataAnnotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808051901548_IdNotAutoIncrement.cs" />
+    <Compile Include="Migrations\201808051901548_IdNotAutoIncrement.Designer.cs">
+      <DependentUpon>201808051901548_IdNotAutoIncrement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808052129358_AddCartModel.cs" />
+    <Compile Include="Migrations\201808052129358_AddCartModel.Designer.cs">
+      <DependentUpon>201808052129358_AddCartModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808062055122_AddItemImg.cs" />
+    <Compile Include="Migrations\201808062055122_AddItemImg.Designer.cs">
+      <DependentUpon>201808062055122_AddItemImg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808082129327_AddPurchases.cs" />
+    <Compile Include="Migrations\201808082129327_AddPurchases.Designer.cs">
+      <DependentUpon>201808082129327_AddPurchases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808082134277_updatePurch.cs" />
+    <Compile Include="Migrations\201808082134277_updatePurch.Designer.cs">
+      <DependentUpon>201808082134277_updatePurch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808112128344_AddPhoneRow.cs" />
+    <Compile Include="Migrations\201808112128344_AddPhoneRow.Designer.cs">
+      <DependentUpon>201808112128344_AddPhoneRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808112217445_AddPurchaseStatus.cs" />
+    <Compile Include="Migrations\201808112217445_AddPurchaseStatus.Designer.cs">
+      <DependentUpon>201808112217445_AddPurchaseStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808122013023_partialCart.cs" />
+    <Compile Include="Migrations\201808122013023_partialCart.Designer.cs">
+      <DependentUpon>201808122013023_partialCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808122047100_AddBoughtItemsInCart.cs" />
+    <Compile Include="Migrations\201808122047100_AddBoughtItemsInCart.Designer.cs">
+      <DependentUpon>201808122047100_AddBoughtItemsInCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808122050025_RemoveDataAnnotations.cs" />
+    <Compile Include="Migrations\201808122050025_RemoveDataAnnotations.Designer.cs">
+      <DependentUpon>201808122050025_RemoveDataAnnotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808122136164_Purchaseupdate.cs" />
+    <Compile Include="Migrations\201808122136164_Purchaseupdate.Designer.cs">
+      <DependentUpon>201808122136164_Purchaseupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808122153156_AddList.cs" />
+    <Compile Include="Migrations\201808122153156_AddList.Designer.cs">
+      <DependentUpon>201808122153156_AddList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808142011241_RemoveLists.cs" />
+    <Compile Include="Migrations\201808142011241_RemoveLists.Designer.cs">
+      <DependentUpon>201808142011241_RemoveLists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808142028372_AddDictionairesInEntities.cs" />
+    <Compile Include="Migrations\201808142028372_AddDictionairesInEntities.Designer.cs">
+      <DependentUpon>201808142028372_AddDictionairesInEntities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808152116058_AddItemAndSizeModel.cs" />
+    <Compile Include="Migrations\201808152116058_AddItemAndSizeModel.Designer.cs">
+      <DependentUpon>201808152116058_AddItemAndSizeModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808152124243_ChangePropertyInItemAndSize.cs" />
+    <Compile Include="Migrations\201808152124243_ChangePropertyInItemAndSize.Designer.cs">
+      <DependentUpon>201808152124243_ChangePropertyInItemAndSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808211748220_AddItemAndSizesToDb.cs" />
+    <Compile Include="Migrations\201808211748220_AddItemAndSizesToDb.Designer.cs">
+      <DependentUpon>201808211748220_AddItemAndSizesToDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808241652093_AutoIncrementItemIdProperty.cs" />
+    <Compile Include="Migrations\201808241652093_AutoIncrementItemIdProperty.Designer.cs">
+      <DependentUpon>201808241652093_AutoIncrementItemIdProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Administrator.cs" />
+    <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ItemAndSize.cs" />
+    <Compile Include="Models\Purchase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="packages.config" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Shared\MemberSection.cshtml" />
+    <Content Include="Views\Shared\NormalSection.cshtml" />
+    <Content Include="Views\Men\Shirts.cshtml" />
+    <Content Include="Views\Men\Shirts2.cshtml" />
+    <Content Include="Views\Admin\Create.cshtml" />
+    <Content Include="Views\Root\Create.cshtml" />
+    <Content Include="Views\Root\Delete.cshtml" />
+    <Content Include="Views\Root\Details.cshtml" />
+    <Content Include="Views\Root\Edit.cshtml" />
+    <Content Include="Views\Root\Index.cshtml" />
+    <Content Include="Views\Admin\Edit.cshtml" />
+    <Content Include="Views\Admin\Change.cshtml" />
+    <Content Include="Views\Admin\Delete.cshtml" />
+    <Content Include="Views\Cart\Buy.cshtml" />
+    <Content Include="Views\AdminPurchases\Index.cshtml" />
+    <Content Include="Views\Men\Jackets.cshtml" />
+    <Content Include="Views\Women\Dresses.cshtml" />
+    <Content Include="Views\Women\Jeans.cshtml" />
+    <Content Include="Views\Cart\Clear.cshtml" />
+    <Content Include="Views\Cart\ThankYou.cshtml" />
+    <Content Include="Views\Home\FAQ.cshtml" />
+    <Content Include="Views\Home\AboutUs.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
+    <Folder Include="Models\ViewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201807262042123_InitialCreate.resx">
+      <DependentUpon>201807262042123_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807291857250_AddItemSize.resx">
+      <DependentUpon>201807291857250_AddItemSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808041936538_ItemArray.resx">
+      <DependentUpon>201808041936538_ItemArray.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808041948120_removeItemArray.resx">
+      <DependentUpon>201808041948120_removeItemArray.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808051750529_AddDataAnnotations.resx">
+      <DependentUpon>201808051750529_AddDataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808051901548_IdNotAutoIncrement.resx">
+      <DependentUpon>201808051901548_IdNotAutoIncrement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808052129358_AddCartModel.resx">
+      <DependentUpon>201808052129358_AddCartModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808062055122_AddItemImg.resx">
+      <DependentUpon>201808062055122_AddItemImg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808082129327_AddPurchases.resx">
+      <DependentUpon>201808082129327_AddPurchases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808082134277_updatePurch.resx">
+      <DependentUpon>201808082134277_updatePurch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808112128344_AddPhoneRow.resx">
+      <DependentUpon>201808112128344_AddPhoneRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808112217445_AddPurchaseStatus.resx">
+      <DependentUpon>201808112217445_AddPurchaseStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808122013023_partialCart.resx">
+      <DependentUpon>201808122013023_partialCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808122047100_AddBoughtItemsInCart.resx">
+      <DependentUpon>201808122047100_AddBoughtItemsInCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808122050025_RemoveDataAnnotations.resx">
+      <DependentUpon>201808122050025_RemoveDataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808122136164_Purchaseupdate.resx">
+      <DependentUpon>201808122136164_Purchaseupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808122153156_AddList.resx">
+      <DependentUpon>201808122153156_AddList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808142011241_RemoveLists.resx">
+      <DependentUpon>201808142011241_RemoveLists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808142028372_AddDictionairesInEntities.resx">
+      <DependentUpon>201808142028372_AddDictionairesInEntities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808152116058_AddItemAndSizeModel.resx">
+      <DependentUpon>201808152116058_AddItemAndSizeModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808152124243_ChangePropertyInItemAndSize.resx">
+      <DependentUpon>201808152124243_ChangePropertyInItemAndSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808211748220_AddItemAndSizesToDb.resx">
+      <DependentUpon>201808211748220_AddItemAndSizesToDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808241652093_AutoIncrementItemIdProperty.resx">
+      <DependentUpon>201808241652093_AutoIncrementItemIdProperty.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1905</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1905/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

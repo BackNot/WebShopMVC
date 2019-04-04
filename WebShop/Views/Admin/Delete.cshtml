@@ -1,0 +1,20 @@
+﻿@using WebShop.Models;
+@model Item
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h1 class="display-4">Delete</h1>
+<br />
+@{
+    if (ViewBag.deletionFailed == true) {
+        <text><span class="text-danger">Please enter correct ID</span></text><br />
+}
+}
+Enter id of item for removal:
+@using (Html.BeginForm("Delete","Admin"))
+{
+    @Html.EditorFor(m=> m.ItemId)
+    <input type="submit" value="DELETE" />
+}
+<small class="text-danger">Warning: Deletion cannot be reversed.</small>

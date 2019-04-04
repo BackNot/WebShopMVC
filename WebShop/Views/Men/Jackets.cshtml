@@ -1,0 +1,91 @@
+﻿@using WebShop.Models;
+<!---List<Item>-->
+@model PagedList.IPagedList<WebShop.Models.Item>
+@using PagedList.Mvc;
+@{
+
+    ViewBag.Title = "Jackets";
+}
+<div class="container d-flex flex-column">
+    <div class="row">
+
+        <div class="col-12">
+            Sort by:
+            @Html.ActionLink("Highest price", "Jackets", new { sortOrder = "high" })
+            or
+            @Html.ActionLink("Lowest price", "Jackets", new { sortOrder = "low" })
+        </div>
+    </div>
+
+
+    <div class="row no-gutters ">
+
+        @{
+
+
+
+            foreach (var item in Model)
+            {
+
+
+
+                <div class="col-auto mb-3">
+                    <!-- CARD -->
+                   
+                        <div class="card h-100" style="width: 13rem; ">
+                            <img class="card-img-top" src="~/@item.Image" height="200" width="200" alt="Image">
+                            <div class="card-body">
+                                <h5 class="card-title">@item.Name</h5>
+                                <p class="card-text">@item.AdditionalInformation</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item item-id-placeholder">ID: @item.ItemId</li>
+                                <li class="list-group-item">Price: @item.Price</li>
+                                <li class="list-group-item">Size: @item.Size</li>
+                            </ul>
+                            <div class="card-body">
+                                Buy:
+                                @{
+              if (item.Size != null)
+        {
+            string[] sizes = item.Size.Split(',');
+
+            using (Html.BeginForm("Jackets", "Men", new { Id = item.ItemId }, FormMethod.Post))
+            {
+                for (int y = 0; y < sizes.Length; y++)
+                {
+
+                    <input name="submit" type="submit" value="@sizes[y]" />
+                }
+            }
+        }
+                                }
+                            </div>
+
+                        </div>
+                    </div>
+ <!-- END CARD-->
+
+            }
+
+        }
+    </div>
+
+    <div class="row ">
+        <div class="col-12 ">
+            @{
+                // Paged list CSS classes
+                var pagedListOpt = new PagedListRenderOptions();
+                pagedListOpt.ClassToApplyToLastListItemInPager = null;
+                pagedListOpt.ContainerDivClasses = new[] { "pagination-container" };
+                pagedListOpt.UlElementClasses = new[] { "ul-element" };
+                pagedListOpt.LiElementClasses = new[] { "li-element" };
+            }
+
+            @Html.PagedListPager(Model, page => Url.Action("Jackets",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }), pagedListOpt)
+            Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+        </div>
+    </div>
+
+</div>

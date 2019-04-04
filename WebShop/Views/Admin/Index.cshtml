@@ -1,0 +1,24 @@
+﻿@using WebShop.Models;
+@model Item
+@{
+    ViewBag.Title = "AdminPanel";
+}
+
+<h1 class="display-4">Admin Panel</h1>
+
+<div class="container d-flex flex-column">
+    <div class="row">
+        <div class="col-3">
+            <input type="button" class="create-button" value="Create Item"/>
+        </div>
+        <div class="col-3">
+            <input type="button" class="change-button" value="Change Item" />
+        </div>
+        <div class="col-3">
+            <input type="button" class="delete-button" value="Delete Item" />
+        </div>
+        <div class="col-3">
+            <input type="button" class="purchases-button" value="Purchases" />
+        </div>
+    </div>
+</div>

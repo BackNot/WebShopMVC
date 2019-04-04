@@ -1,0 +1,147 @@
+c:\users\alex\documents\visual studio 2013\Projects\WebShop\WebShop\bin\WebShop.dll.config
+c:\users\alex\documents\visual studio 2013\Projects\WebShop\WebShop\bin\WebShop.dll
+c:\users\alex\documents\visual studio 2013\Projects\WebShop\WebShop\bin\WebShop.pdb
+c:\users\alex\documents\visual studio 2013\Projects\WebShop\WebShop\bin\System.Web.Helpers.dll
+c:\users\alex\documents\visual studio 2013\Projects\WebShop\WebShop\bin\System.Web.Mvc.dll
+c:\users\alex\documents\visual studio 2013\Projects\WebShop\WebShop\bin\System.Web.Razor.dll
+c:\users\alex\documents\visual studio 2013\Projects\WebShop\WebShop\bin\System.Web.Webpages.Deployment.dll
+c:\users\alex\documents\visual studio 2013\Projects\WebShop\WebShop\bin\System.Web.Webpages.dll
+c:\users\alex\documents\visual studio 2013\Projects\WebShop\WebShop\bin\System.Web.Webpages.Razor.dll
+c:\users\alex\documents\visual studio 2013\Projects\WebShop\WebShop\bin\System.Web.Razor.xml
+c:\users\alex\documents\visual studio 2013\Projects\WebShop\WebShop\bin\System.Web.Webpages.xml
+c:\users\alex\documents\visual studio 2013\Projects\WebShop\WebShop\bin\System.Web.Webpages.Deployment.xml
+c:\users\alex\documents\visual studio 2013\Projects\WebShop\WebShop\bin\System.Web.Webpages.Razor.xml
+c:\users\alex\documents\visual studio 2013\Projects\WebShop\WebShop\bin\System.Web.Helpers.xml
+c:\users\alex\documents\visual studio 2013\Projects\WebShop\WebShop\bin\System.Web.Mvc.xml
+c:\users\alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.csprojResolveAssemblyReference.cache
+c:\users\alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.dll
+c:\users\alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.pdb
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\WebShop\WebShop\bin\EntityFramework.dll
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\WebShop\WebShop\bin\EntityFramework.SqlServer.dll
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\WebShop\WebShop\bin\EntityFramework.xml
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\WebShop\WebShop\bin\EntityFramework.SqlServer.xml
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.InitialCreate.resources
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.csproj.GenerateResource.Cache
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddItemSize.resources
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\bin\PagedList.dll
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\bin\PagedList.Mvc.dll
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\bin\PagedList.xml
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\bin\PagedList.Mvc.xml
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.ItemArray.resources
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.removeItemArray.resources
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddDataAnnotations.resources
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.IdNotAutoIncrement.resources
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddCartModel.resources
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddItemImg.resources
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddPurchases.resources
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.updatePurch.resources
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddPhoneRow.resources
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddPurchaseStatus.resources
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.partialCart.resources
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddBoughtItemsInCart.resources
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.RemoveDataAnnotations.resources
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.Purchaseupdate.resources
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddList.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\WebShop.dll.config
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\WebShop.dll
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\WebShop.pdb
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\EntityFramework.dll
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\EntityFramework.SqlServer.dll
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\PagedList.dll
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\PagedList.Mvc.dll
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\System.Web.Helpers.dll
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\System.Web.Mvc.dll
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\System.Web.Razor.dll
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\System.Web.Webpages.dll
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\System.Web.Webpages.Razor.dll
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\EntityFramework.xml
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\EntityFramework.SqlServer.xml
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\PagedList.xml
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\PagedList.Mvc.xml
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\System.Web.Razor.xml
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\System.Web.Webpages.xml
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\System.Web.Webpages.Razor.xml
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\System.Web.Helpers.xml
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\bin\System.Web.Mvc.xml
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\obj\Debug\WebShop.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\obj\Debug\WebShop.Migrations.InitialCreate.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddItemSize.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\obj\Debug\WebShop.Migrations.ItemArray.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\obj\Debug\WebShop.Migrations.removeItemArray.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddDataAnnotations.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\obj\Debug\WebShop.Migrations.IdNotAutoIncrement.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddCartModel.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddItemImg.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddPurchases.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\obj\Debug\WebShop.Migrations.updatePurch.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddPhoneRow.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddPurchaseStatus.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\obj\Debug\WebShop.Migrations.partialCart.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddBoughtItemsInCart.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\obj\Debug\WebShop.Migrations.RemoveDataAnnotations.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\obj\Debug\WebShop.Migrations.Purchaseupdate.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddList.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\obj\Debug\WebShop.csproj.GenerateResource.Cache
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\obj\Debug\WebShop.dll
+C:\Users\Alex\Documents\Visual Studio 2013\Нова папка\WebShop\WebShop\obj\Debug\WebShop.pdb
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.RemoveLists.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddDictionairesInEntities.resources
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddItemAndSizeModel.resources
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.ChangePropertyInItemAndSize.resources
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddItemAndSizesToDb.resources
+C:\Users\Alex\documents\visual studio 2013\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AutoIncrementItemIdProperty.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\WebShop.dll.config
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\WebShop.dll
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\WebShop.pdb
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\EntityFramework.dll
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\EntityFramework.SqlServer.dll
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\PagedList.dll
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\PagedList.Mvc.dll
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\System.Web.Helpers.dll
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\System.Web.Mvc.dll
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\System.Web.Razor.dll
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\System.Web.Webpages.Deployment.dll
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\System.Web.Webpages.dll
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\System.Web.Webpages.Razor.dll
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\EntityFramework.xml
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\EntityFramework.SqlServer.xml
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\PagedList.xml
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\PagedList.Mvc.xml
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\System.Web.Razor.xml
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\System.Web.Webpages.xml
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\System.Web.Webpages.Deployment.xml
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\System.Web.Webpages.Razor.xml
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\System.Web.Helpers.xml
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\System.Web.Mvc.xml
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.csprojAssemblyReference.cache
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.InitialCreate.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddItemSize.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.ItemArray.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.removeItemArray.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddDataAnnotations.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.IdNotAutoIncrement.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddCartModel.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddItemImg.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddPurchases.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.updatePurch.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddPhoneRow.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddPurchaseStatus.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.partialCart.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddBoughtItemsInCart.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.RemoveDataAnnotations.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.Purchaseupdate.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddList.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.RemoveLists.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddDictionairesInEntities.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddItemAndSizeModel.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.ChangePropertyInItemAndSize.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AddItemAndSizesToDb.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.Migrations.AutoIncrementItemIdProperty.resources
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.csproj.GenerateResource.cache
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.csproj.CoreCompileInputs.cache
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.csproj.CopyComplete
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.dll
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\obj\Debug\WebShop.pdb
+C:\Users\alex\Desktop\Projects\WebShop\WebShop\bin\Microsoft.Web.Infrastructure.dll
