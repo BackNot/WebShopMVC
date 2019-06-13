@@ -1,9 +1,11 @@
 # WebShopMVC
 This is project made for FUN. It imitates online shop for clothes. 
 
-Stack used: ASP.NET MVC, Entity Framework, HTML5/CSS3, JavaScript(jQuery) , Bootstrap 4.
+## Stack used
+ASP.NET MVC, Entity Framework, HTML5/CSS3, JavaScript(jQuery) , Bootstrap 4.
 It requires SQL Server 2017.
 
+## About
 You can choose between clothes for Men and Women. They have 2 categories (Jackets,Shirts for men and Dresses,Jeans for women).
 
 At the right of your screen is the Cart. From Login you can enter in your administrator account.
